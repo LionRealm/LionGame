@@ -8,11 +8,12 @@ namespace Pathfinding {
 public class Villager : AIPath
 {	
 
-
+	
 	public float sleepVelocity = 0.4F;
 	public float animationSpeed = 0.2F;
 	public GameObject endOfPathEffect;
 
+	//Selection Glow
 	public GameObject selectionGlow = null;
 	public Transform[] resource;
 	public Transform village;
@@ -49,15 +50,15 @@ public class Villager : AIPath
 	}
 
 
-		List<int> usedValues = new List<int>();
-		public int UniqueRandomInt(int min, int max)
-		{
-			int val = Random.Range(min, max);
-			do {
-				val = Random.Range (min, max);
-			} while(usedValues.Contains(val));
-			return val;
-		}
+	List<int> usedValues = new List<int>();
+	public int UniqueRandomInt(int min, int max)
+	{
+		int val = Random.Range(min, max);
+		do {
+			val = Random.Range (min, max);
+		} while(usedValues.Contains(val));
+		return val;
+	}
 
 	protected new void Update () {
 		
