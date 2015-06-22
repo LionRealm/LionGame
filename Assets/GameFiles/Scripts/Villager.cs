@@ -18,10 +18,10 @@ public class Villager : AIPath
 	public Transform[] resource;
 	public Transform village;
 	public Transform mouseTarget;
-	public float capacity, collectionAmount, depositAmount;
+	public float capacity, collectionAmount;
 	public bool selected = false;
 
-	private float currentLoad = 0.0f, currentDeposit = 0.0f;
+	private float currentLoad = 0.0f;
 	private bool selectedByClick = false;
 	private bool Harvesting = false;
 	private GameObject Glow = null;
@@ -36,7 +36,7 @@ public class Villager : AIPath
 		animation.Play ("Walk");
 		capacity = 20.0f;
 		int i = 0;
-
+		
 
 
 			try{
@@ -103,18 +103,6 @@ public class Villager : AIPath
 				
 				
 				
-			Vector3 relVelocity = tr.InverseTransformDirection (velocity);
-			relVelocity.y = 0;
-				
-			if (velocity.sqrMagnitude <= sleepVelocity * sleepVelocity) {
-
-					
-			} else {
-					
-					
-				float speed = relVelocity.z;
-					
-			}
 			if (!moving) {
 				if (Vector3.Distance (transform.position, resource [Rand].transform.position) < 5.0f) {
 				
@@ -133,6 +121,8 @@ public class Villager : AIPath
 				}
 			}
 		}
+
+	
 
 
 
@@ -159,6 +149,7 @@ public class Villager : AIPath
 				
 				Glow = (GameObject)GameObject.Instantiate(selectionGlow,transform.position,Quaternion.identity);
 				Glow.transform.parent = transform;
+				
 				//Glow.transform.localPosition = new Vector3(0,-GetComponent<MeshFilter>().mesh.bounds.extents.y,0);
 				Debug.Log ("Selected");
 				
@@ -168,6 +159,7 @@ public class Villager : AIPath
 			
 			else if (!selected && Glow !=null){
 				GameObject.Destroy (Glow);
+				
 				Glow = null;
 				Debug.Log ("Selected off");
 				renderer.material.color = Color.white;

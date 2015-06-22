@@ -192,21 +192,7 @@ namespace Pathfinding {
 				}
 			
 			
-				//Animation
-			
-				//Calculate the velocity relative to this transform's orientation
-				Vector3 relVelocity = tr.InverseTransformDirection (velocity);
-				relVelocity.y = 0;
-			
-				if (velocity.sqrMagnitude <= sleepVelocity * sleepVelocity) {
-					//Fade out walking animation
-			
-				} else {
-			
-				
-					float speed = relVelocity.z;
-			
-				}
+
 			}
 		}
 	}
