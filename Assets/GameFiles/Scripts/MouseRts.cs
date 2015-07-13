@@ -15,7 +15,8 @@ public class MouseRts : MonoBehaviour
 	private const int PanSpeed = 50;
 	private const int PanAngleMin = 50;
 	private const int PanAngleMax = 80;
-	
+
+
 	// Update is called once per frame
 	void Update()
 	{

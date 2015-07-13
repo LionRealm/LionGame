@@ -57,7 +57,7 @@ public class CameraOperator : MonoBehaviour {
 	private void CheckCamera(){
 		if(Input.GetMouseButtonDown (0)){
 			startClick = Input.mousePosition;
-		Debug.Log ("MouseLeftClick");
+		
 		}else if(Input.GetMouseButtonUp (0))
 		{
 			startClick = -Vector3.one;
