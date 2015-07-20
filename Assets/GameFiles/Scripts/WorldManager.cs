@@ -44,7 +44,7 @@ public class WorldManager : MonoBehaviour {
 	}
 	[SerializeField]private TurnState turnState;
 	
-	private PathingScript player;
+	private KnightMove player;
 
 	private Transform targetLocation;
 
@@ -88,7 +88,7 @@ public class WorldManager : MonoBehaviour {
 	}
 	private void GatherStartUpComponents()
 	{
-		player = GameObject.Find("Player").GetComponent<PathingScript>();
+		player = GameObject.Find("Player").GetComponent<KnightMove>();
 	}
 	private void TurnChecking()
 	{

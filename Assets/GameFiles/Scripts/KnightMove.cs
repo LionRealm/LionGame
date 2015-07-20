@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Pathfinding;
 
-namespace Pathfinding
-{
+
 		/** AI controller specifically made for the spider robot.
 	 * The spider robot (or mine-bot) which is got from the Unity Example Project
 	 * can have this script attached to be able to pathfind around with animations working properly.\n
@@ -111,6 +110,15 @@ namespace Pathfinding
 			
 				}
 
+				public void GetNewPath (Vector3 position)
+				{
+					
+					target.position = position;
+					print(target.position);
+					seeker.StartPath (transform.position, target.position, OnPathComplete);
+					moving = true;
+				}
+
 				private void Selection ()
 				{
 						if (renderer.isVisible && Input.GetMouseButton (0)) {
@@ -216,4 +224,3 @@ namespace Pathfinding
 
 
 
-}

@@ -42,9 +42,9 @@ public class PathingScript : AIPath
 
 		Vector3 velocity;
 
-		if (moving) {
-			animation.Play ("run");
-		}
+//		if (moving) {
+//			animation.Play ("run");
+//		}
 		if (canMove) {
 			
 			//Calculate desired velocity
@@ -103,7 +103,7 @@ public class PathingScript : AIPath
 		public void GetNewPath (Vector3 position)
 		{
 				targetPosition = position;
-		print(targetPosition);
+				print(targetPosition);
 				seeker.StartPath (transform.position, targetPosition, OnPathComplete);
 				moving = true;
 		}
