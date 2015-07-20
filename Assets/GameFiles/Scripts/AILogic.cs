@@ -90,7 +90,7 @@ public class AILogic : MonoBehaviour
 
 		foreach (GameObject Village in gos) {
 			// If the village is an AI village
-			if (Village.GetComponent <VillageManager> ().inVillage) {
+			if (Village.GetComponent <PopulationBuilding> ().inVillage) {
 				chosenVillage = Village;
 			}
 					
@@ -127,7 +127,10 @@ public class AILogic : MonoBehaviour
 			GameObject soldier = (GameObject)Instantiate (Villager, ChooseStartingVillage ().transform.position, Quaternion.identity);
 			Starting = false;
 		} else {
+			try{
 			Instantiate (Villager, ChooseVillage ().transform.position, Quaternion.identity);
+			}catch{
+				}
 
 						
 		}

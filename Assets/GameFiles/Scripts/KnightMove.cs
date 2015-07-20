@@ -174,19 +174,19 @@ using Pathfinding;
 						if (moving) {
 							animation.Play ("run");
 						}
-			if (GameObject.Find ("Managers").GetComponent<Manager> ().canMove) {
-				foreach (GameObject obj in GameObject.FindGameObjectsWithTag("TownCentre")) {
-					if (obj.GetComponent<VillageManager> ().secondSelect) {
-						target.position = obj.GetComponent<VillageManager> ().villagePoint.position;
-						GameObject.Find ("Managers").GetComponent<Manager>().playerTurns -= 1;
-						moving = true;
-						obj.GetComponent<VillageManager> ().secondSelect = false;
-					}
-				}
-				
-				
-			}
-			
+//			if (GameObject.Find ("Managers").GetComponent<Manager> ().canMove) {
+//				foreach (GameObject obj in GameObject.FindGameObjectsWithTag("TownCentre")) {
+//					if (obj.GetComponent<VillageManager> ().secondSelect) {
+//						target.position = obj.GetComponent<VillageManager> ().villagePoint.position;
+//						GameObject.Find ("Managers").GetComponent<Manager>().playerTurns -= 1;
+//						moving = true;
+//						obj.GetComponent<VillageManager> ().secondSelect = false;
+//					}
+//				}
+//				
+//				
+//			}
+//			
 			if (canMove) {
 				
 				//Calculate desired velocity

@@ -28,8 +28,8 @@ public class Soldier : AIPath
 
 		}
 
-		FindSecondVillage ().GetComponent<VillageManager> ().secondVisit = true;
-		FindThirdVillage ().GetComponent<VillageManager> ().thirdVisit = true;
+		FindSecondVillage ().GetComponent<PopulationBuilding> ().secondVisit = true;
+		FindThirdVillage ().GetComponent<PopulationBuilding> ().thirdVisit = true;
 		animation.Play ("Walk");
 
 		base.Start ();
@@ -64,7 +64,7 @@ public class Soldier : AIPath
 		foreach (GameObject go in gos) {
 			Vector3 diff = go.transform.position - position;
 			float curDistance = diff.sqrMagnitude;
-			if (go.GetComponent <VillageManager> ().inVillage == false && go.GetComponent <VillageManager> ().hasVisited == false) {
+			if (go.GetComponent <PopulationBuilding> ().inVillage == false && go.GetComponent <PopulationBuilding> ().hasVisited == false) {
 				if (curDistance < distance) {
 					closest = go;
 					distance = curDistance;
@@ -89,7 +89,7 @@ public class Soldier : AIPath
 		foreach (GameObject go in gos) {
 			Vector3 diff = go.transform.position - position;
 			float curDistance = diff.sqrMagnitude;
-			if (go.GetComponent <VillageManager> ().inVillage == false && go.GetComponent <VillageManager> ().hasVisited == false) {
+			if (go.GetComponent <PopulationBuilding> ().inVillage == false && go.GetComponent <PopulationBuilding> ().hasVisited == false) {
 				if (curDistance < distance) {
 					closest = go;
 					distance = curDistance;
@@ -114,7 +114,7 @@ public class Soldier : AIPath
 		foreach (GameObject go in gos) {
 			Vector3 diff = go.transform.position - position;
 			float curDistance = diff.sqrMagnitude;
-			if (go.GetComponent <VillageManager> ().inVillage == false && go.GetComponent <VillageManager> ().hasVisited == false && go.GetComponent <VillageManager> ().secondVisit == false) {
+			if (go.GetComponent <PopulationBuilding> ().inVillage == false && go.GetComponent <PopulationBuilding> ().hasVisited == false && go.GetComponent <PopulationBuilding> ().secondVisit == false) {
 				if (curDistance < distance) {
 					closest = go;
 					distance = curDistance;
@@ -180,21 +180,21 @@ public class Soldier : AIPath
 
 	void OnTriggerEnter (Collider col)
 	{
-		if (col.gameObject.name == nameOfTag && col.gameObject.GetComponent<VillageManager> ().inVillage == false) {
+		if (col.gameObject.name == nameOfTag && col.gameObject.GetComponent<PopulationBuilding> ().inVillage == false) {
 			//Debug.Log ("Visited Villages" + vistedVillages.Count);
 			Debug.Log ("Village Count" + villages.Count);
 
 
 			// Once the village is filled turrn the village into an AI village
-			if (FindClosestVillage ().GetComponent<VillageManager> ().inVillage == false) {
+			if (FindClosestVillage ().GetComponent<PopulationBuilding> ().inVillage == false) {
 				foreach (GameObject obj in GameObject.FindGameObjectsWithTag(nameOfTag)) {
-					obj.transform.GetComponent<VillageManager> ().inVillage = false;
-					obj.transform.GetComponent<VillageManager> ().secondVisit = false;
-					obj.transform.GetComponent<VillageManager> ().thirdVisit = false;
+					obj.transform.GetComponent<PopulationBuilding> ().inVillage = false;
+					obj.transform.GetComponent<PopulationBuilding> ().secondVisit = false;
+					obj.transform.GetComponent<PopulationBuilding> ().thirdVisit = false;
 				}
-				col.transform.GetComponent<VillageManager> ().inVillage = true;
-				FindSecondVillage ().GetComponent<VillageManager> ().secondVisit = true;
-				FindThirdVillage ().GetComponent<VillageManager> ().thirdVisit = true;
+				col.transform.GetComponent<PopulationBuilding> ().inVillage = true;
+				FindSecondVillage ().GetComponent<PopulationBuilding> ().secondVisit = true;
+				FindThirdVillage ().GetComponent<PopulationBuilding> ().thirdVisit = true;
 				GameObject.Find ("AIManager").GetComponent<AILogic> ().currentPhase = AILogic.Phase.Checking;
 				GameObject.Find ("AIManager").GetComponent<AILogic> ().spawned = false;
 			}
@@ -212,11 +212,11 @@ public class Soldier : AIPath
 		if (col.gameObject.name == nameOfTag) {
 
 			//Debug.Log ("Visited Villages" + vistedVillages.Count);
-			col.transform.GetComponent<VillageManager> ().hasVisited = true;
-			col.transform.GetComponent<VillageManager> ().inVillage = false;
+			col.transform.GetComponent<PopulationBuilding> ().hasVisited = true;
+			col.transform.GetComponent<PopulationBuilding> ().inVillage = false;
 			foreach (GameObject obj in GameObject.FindGameObjectsWithTag(nameOfTag)) {
-				if (obj.transform.GetComponent<VillageManager> ().inVillage) {
-					obj.GetComponent<VillageManager> ().hasVisited = true;
+				if (obj.transform.GetComponent<PopulationBuilding> ().inVillage) {
+					obj.GetComponent<PopulationBuilding> ().hasVisited = true;
 				}
 
 			}
@@ -229,7 +229,7 @@ public class Soldier : AIPath
 
 	void CheckVistedVillages(){
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag(nameOfTag)) {
-			if (obj.transform.GetComponent<VillageManager> ().hasVisited) {
+			if (obj.transform.GetComponent<PopulationBuilding> ().hasVisited) {
 				Debug.Log ("Added Visited Village");
 				vistedVillages.Add (obj);
 				Debug.Log ("visitedVillage count " + vistedVillages.Count);
@@ -239,7 +239,7 @@ public class Soldier : AIPath
 		if (vistedVillages.Count ==8) {
 			Debug.Log("Finished First Round of Checks");
 			foreach (GameObject obj in GameObject.FindGameObjectsWithTag(nameOfTag)) {
-				obj.transform.GetComponent<VillageManager> ().hasVisited = false;
+				obj.transform.GetComponent<PopulationBuilding> ().hasVisited = false;
 			}
 		}
 

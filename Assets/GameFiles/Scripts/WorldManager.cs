@@ -131,8 +131,11 @@ public class WorldManager : MonoBehaviour {
 	}
 	private void EnemyTurn()
 	{
+		GameObject.Find ("AIManager").GetComponent<AILogic> ().AITurn = true;
+		turnState = TurnState.PlayerTurn;
 		if(Input.GetKeyDown(KeyCode.A))
 		{
+
 			turnState = TurnState.PlayerTurn;
 			playerActions = 3;
 		}

@@ -12,6 +12,11 @@ public class PopulationBuilding : MonoBehaviour {
 	public int CurrentPopulation{get{return currentPopulation;}set{currentPopulation = value;}}
 	public int RequiredWood{get{return requiredWood;}set{requiredWood = value;}}
 	public int RequiredPopulation{get{return requiredPopulation;}set{requiredPopulation = value;}}
+	public bool inVillage = false;
+	public bool hasVisited = false;
+	public bool secondVisit = false;
+	public bool	thirdVisit = false;
+
 
 	private int productionInt = 0;
 	//Private:
