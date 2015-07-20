@@ -133,6 +133,7 @@ public class WorldManager : MonoBehaviour {
 	{
 		GameObject.Find ("AIManager").GetComponent<AILogic> ().AITurn = true;
 		turnState = TurnState.PlayerTurn;
+		playerActions = 3;
 		if(Input.GetKeyDown(KeyCode.A))
 		{
 
