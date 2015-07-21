@@ -197,6 +197,13 @@ public class Soldier : AIPath
 				FindThirdVillage ().GetComponent<PopulationBuilding> ().thirdVisit = true;
 				GameObject.Find ("AIManager").GetComponent<AILogic> ().currentPhase = AILogic.Phase.Checking;
 				GameObject.Find ("AIManager").GetComponent<AILogic> ().spawned = false;
+
+				if(col.transform.GetComponent<PopulationBuilding> ().CurrentWood != 200){
+					Debug.Log ("Suspicious");
+				}
+				if(col.transform.GetComponent<PopulationBuilding> ().CurrentPopulation != 2){
+					Debug.Log ("Suspicious");
+				}
 			}
 
 

@@ -13,13 +13,13 @@ public class PathingScript : AIPath
 		private Vector3 dir;
 
 		//Components to be accessed from other gameobjects
-		private Seeker seeker;
-		private CharacterController controller;
+//		private Seeker seeker;
+//		private CharacterController controller;
 		//private WorldManager worldManager;
 
 		//variables to use in order to find path and move
 		private Path path;
-		private float speed = 250;
+//		private float speed = 250;
 		private float nextWayPointDistance = 0.1f;
 		private int currentWayPoint = 0;
 
@@ -34,6 +34,7 @@ public class PathingScript : AIPath
 		private void Start ()
 		{
 				GetStartUpComponents ();
+				animation.Play ("Walk");
 		}
 	
 		// Update is called once per frame
@@ -51,7 +52,7 @@ public class PathingScript : AIPath
 			Vector3 dir = CalculateVelocity (GetFeetPosition ());
 			
 			//Rotate towards targetDirection (filled in by CalculateVelocity)
-			RotateTowards (targetPosition);
+			RotateTowards (targetDirection);
 			
 			dir.y = 0;
 			if (dir.sqrMagnitude > sleepVelocity * sleepVelocity) {
@@ -75,36 +76,39 @@ public class PathingScript : AIPath
 		}
 		}
 
-		private void FixedUpdate ()
-		{
-				if (path == null) {
-						return;
-				}
-				if (currentWayPoint >= path.vectorPath.Count) {
-						return;
-				}
-				dir = (path.vectorPath [currentWayPoint] - transform.position).normalized;
-				dir *= speed * Time.deltaTime;
-				controller.SimpleMove(dir);
-				if (Vector3.Distance (transform.position, path.vectorPath [currentWayPoint]) < nextWayPointDistance) {
-						currentWayPoint++;
-				}
-		}
-
-		private void OnPathComplete (Path p)
-		{
-				if (!p.error) {
-						path = p;
-						currentWayPoint = 0;
-				}
-		moving = false;
-		}
+//		private void FixedUpdate ()
+//		{
+//				if (path == null) {
+//						return;
+//				}
+//				if (currentWayPoint >= path.vectorPath.Count) {
+//						return;
+//				}
+//
+//				dir = (path.vectorPath [currentWayPoint] - transform.position).normalized;
+//				dir *= speed * Time.deltaTime;
+//		RotateTowards (dir);
+//				controller.SimpleMove(dir);
+//				if (Vector3.Distance (transform.position, path.vectorPath [currentWayPoint]) < nextWayPointDistance) {
+//						currentWayPoint++;
+//				}
+//		}
+//
+//		private void OnPathComplete (Path p)
+//		{
+//				if (!p.error) {
+//						path = p;
+//						currentWayPoint = 0;
+//				}
+//		moving = false;
+//		}
 
 		public void GetNewPath (Vector3 position)
 		{
-				targetPosition = position;
-				print(targetPosition);
-				seeker.StartPath (transform.position, targetPosition, OnPathComplete);
+				target.position = position;
+//				targetPosition = position;
+//				print(targetPosition);
+				seeker.StartPath (transform.position, target.position, OnPathComplete);
 				moving = true;
 		}
 		public override Vector3 GetFeetPosition ()
