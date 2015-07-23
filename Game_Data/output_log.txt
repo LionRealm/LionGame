@@ -2,150 +2,27 @@ Initialize engine version: 4.6.1f1 (d1db7a1b5196)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 680MX (ID=0x11a3)
-    Vendor:   NVIDIA
-    VRAM:     1990 MB
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     1016 MB
 Default GameObject Tag: Player already registered
  
 (Filename:  Line: 67)
 
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Pathfinding.Ionic.Zip.Reduced.dll (this message is harmless)
-Loading C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Pathfinding.Ionic.Zip.Reduced.dll into Unity Child Domain
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Pathfinding.JsonFx.dll (this message is harmless)
-Loading C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\Pathfinding.JsonFx.dll into Unity Child Domain
-- Completed reload, in  0.037 seconds
-desktop: 2560x1440 59Hz; virtual: 2560x1440 at 0,0
+Platform assembly: C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Pathfinding.Ionic.Zip.Reduced.dll (this message is harmless)
+Loading C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Pathfinding.Ionic.Zip.Reduced.dll into Unity Child Domain
+Platform assembly: C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Pathfinding.JsonFx.dll (this message is harmless)
+Loading C:\Users\joffrea123\Desktop\LionRealm\Game_Data\Managed\Pathfinding.JsonFx.dll into Unity Child Domain
+- Completed reload, in  0.081 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\kediza.SAE\Desktop\LionGame\Game_Data\Managed\System.dll (this message is harmless)
-WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
-The tree Bush1 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 80)
-
-The tree Bush2 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 80)
-
-The tree Bush5 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 80)
-
-The tree Bush4 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 80)
-
-Scanning - Process took 34 ms to complete
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-0
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-True
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-True
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Tree2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Selected off
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-False
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-False
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-True
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-True
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawn
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-False
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-False
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-True
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-True
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
