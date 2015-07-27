@@ -116,6 +116,11 @@ public class AILogic : MonoBehaviour
 			}
 			
 		}
+<<<<<<< HEAD
+=======
+		
+		
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 		return chosenVillage;
 	}
 

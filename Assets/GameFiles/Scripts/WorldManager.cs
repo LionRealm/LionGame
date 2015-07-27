@@ -1,17 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
+<<<<<<< HEAD
 using System.Collections.Generic;
+=======
+
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 public class WorldManager : MonoBehaviour {
 
 
 	//Public:
+<<<<<<< HEAD
+=======
+	public enum BuildingState
+	{
+		FirstClick,
+		FirstWait,
+		SecondClick,
+		SecondWait,
+	}
+	public BuildingState buildingState;
+
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 	public bool SendPlayer{set{sendPlayer = value;}}
 
 	public bool SendVillager{get{return sendVillager;}set{sendVillager = value;}}
 
 	public bool PlayerSent{get;set;}
 
+<<<<<<< HEAD
 	public bool markingVillage;
+=======
+	public bool LookingForVillagerTarget{get{return lookingForVilagerTarget;}set{lookingForVilagerTarget = value;}}
+
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 	public int PlayerActions{get{return playerActions;}set{playerActions = value;}}
 
 	public int RequiredWood{get{return clickedBuildingRequiredWood;}set{clickedBuildingRequiredWood = value;}}
@@ -26,15 +47,24 @@ public class WorldManager : MonoBehaviour {
 
 	public Transform VillagerTargetLocation{get{return villagerTargetLocation;} set{villagerTargetLocation = value;}}
 
+<<<<<<< HEAD
 	public Transform MarkedVillage{set{targetLocation = value;villagerTargetLocation = value;}}
 	//Private:
 	private UserInterface userInterface;
 	public enum TurnState
+=======
+	//Private:
+	private enum TurnState
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 	{
 		PlayerTurn,
 		EnemyTurn,
 	}
+<<<<<<< HEAD
 	public TurnState turnState;
+=======
+	[SerializeField]private TurnState turnState;
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 	
 	private KnightMove player;
 
@@ -69,6 +99,10 @@ public class WorldManager : MonoBehaviour {
 	void Start () 
 	{
 		GatherStartUpComponents();
+<<<<<<< HEAD
+=======
+		buildingState = BuildingState.SecondWait;
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 		playerActions = 3;
 	}
 	
@@ -80,7 +114,10 @@ public class WorldManager : MonoBehaviour {
 	private void GatherStartUpComponents()
 	{
 		player = GameObject.Find("Player").GetComponent<KnightMove>();
+<<<<<<< HEAD
 		userInterface = GameObject.Find("UserInterFace").GetComponent<UserInterface>();
+=======
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 	}
 	private void TurnChecking()
 	{
@@ -108,11 +145,15 @@ public class WorldManager : MonoBehaviour {
 		if(sendVillager)
 		{
 			playerActions--;
+<<<<<<< HEAD
 			userInterface.SelectedBuilding.GetComponent<PopulationBuilding>().InstantiateVillagers(userInterface.tempInt);
 			foreach(GameObject currentVillager in userInterface.SelectedBuilding.GetComponent<PopulationBuilding>().villagers)
 			{
 
 			}
+=======
+			tempVillager.GetComponent<PathingScript>().GetNewPath(villagerTargetLocation.position);
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 			sendVillager = false;
 		}
 	}
@@ -138,5 +179,8 @@ public class WorldManager : MonoBehaviour {
 		}
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3244cd1f2d83c74cabe1a3bba9914f7d5be3aa88
 }
